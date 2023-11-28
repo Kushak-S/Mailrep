@@ -90,7 +90,7 @@ app.get("/api", async (req, res) => {
                 format: 'metadata',
                 metadataHeaders: ['Subject', 'From'],
             });
-            console.log(res.data.payload);
+            
             const subject = res.data.payload.headers.find(
                 (header) => header.name === 'Subject'
             ).value
